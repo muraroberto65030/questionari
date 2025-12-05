@@ -2,7 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-change-me-in-production'
+SECRET_KEY = '324kjf84ch4c402f42ohf4'
 
 DEBUG = False
 
@@ -54,7 +54,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'questionari/db.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
