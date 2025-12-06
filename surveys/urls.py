@@ -6,8 +6,8 @@ router = DefaultRouter()
 router.register(r'surveys', SurveyViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
+    path('surveys/history/', UserHistoryView.as_view(), name='user_history'),
     path('auth/verify/', VerifyTokenView.as_view(), name='verify_token'),
     path('surveys/<int:pk>/submit/', SubmitResponseView.as_view(), name='submit_survey'),
-    # path('history/', UserHistoryView.as_view(), name='user_history'),
+    path('', include(router.urls)),
 ]
