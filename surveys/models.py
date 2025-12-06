@@ -14,6 +14,7 @@ class Questionnaire(models.Model):
         ('dark', 'Dark (Night Mode)'),
     ]
     theme = models.CharField(max_length=20, choices=THEME_CHOICES, default='professional')
+    is_anonymous = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title

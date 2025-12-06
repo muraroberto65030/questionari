@@ -11,7 +11,7 @@ class QuestionnaireSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Questionnaire
-        fields = ['id', 'title', 'description', 'questions', 'created_at', 'theme']
+        fields = ['id', 'title', 'description', 'questions', 'created_at', 'theme', 'is_anonymous']
         
     def create(self, validated_data):
         questions_data = validated_data.pop('questions', [])

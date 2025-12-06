@@ -46,7 +46,7 @@ class SurveyViewSet(viewsets.ModelViewSet):
         for r in responses:
             data.append({
                 'id': r.id,
-                'email': r.invitation.email,
+                'email': 'Anonymous' if survey.is_anonymous else r.invitation.email,
                 'question': r.question.text,
                 'answer': r.answer_text if r.question.question_type == 'text' else r.answer_choice,
                 'submitted_at': r.submitted_at
