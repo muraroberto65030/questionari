@@ -43,6 +43,7 @@ class Invitation(models.Model):
     ROLES = [
         ('user', 'User'),
         ('observer', 'Observer'),
+        ('creator', 'Creator'),
     ]
 
     email = models.EmailField()
