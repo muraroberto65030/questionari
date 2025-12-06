@@ -17,7 +17,7 @@ if DEBUG:
 else:
     ALLOWED_HOSTS = ['3sc0b4r.pythonanywhere.com']
     CORS_ALLOWED_ORIGINS = [
-        "https://questionaricompt.vercel.app",
+        "*",
     ]
 
 INSTALLED_APPS = [
